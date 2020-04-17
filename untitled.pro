@@ -38,6 +38,7 @@ HEADERS += \
     headers/mainwindow.h \
     headers/simulator.h
 
+
 FORMS += \
         mainwindow.ui
 
