@@ -10,9 +10,19 @@ MIPS-sim 是一个基于Qt实现的带图形界面的MIPS汇编指令的编辑�
 
 <img src="document/sim-eg.png"  width="500px" style="margin: 15px;" />
 
+- 文件菜单：
+
+新建、打开、保存代码文件；
+
+支持 .asm 汇编文件汇编为 .bin 文件并导出；
+
+支持  .bin 文件反汇编为 .asm 文件，支持导入加载 .bin 文件并执行：
+
+<img src="document/memu-file.png"  width="200px" style="margin: 15px;" />
+
 - 编辑器/编译界面
 
-下方为编译输出结果，对相应错误有错误详细信息以及行号提示
+上方为代码编辑器，下方为编译输出结果，对相应错误有错误详细信息以及行号提示
 
 <img src="document/com-eg.png"  width="500px" style="margin: 15px;" />
 
@@ -45,3 +55,34 @@ MIPS-sim 具有简单的模拟与调试功能。可以通过 syscall 指令向�
 - document：文档
 
 运行时需要将code.txt代码配置文档放在程序运行目录
+
+## 源代码
+由三个部分组成，其中模拟器类和汇编、反汇编c语言库可复用
+
+1. C语言实现的将MIPS汇编指令转换为机器码，或进行反汇编
+    - 公共头文件compiler.h: 
+
+	    compile.c 实现了将输入的源代码文件转换为二进制数组；
+
+        decompiler.c 将一条机器码反汇编为MIPS汇编指令
+
+        singleCompiler.c 将一条MIPS汇编指令编译为机器码（可单独调用）
+
+2. c++实现的模拟器类：
+
+	- simulator.h
+
+        simulator.cpp
+
+3.  Qt窗口类：
+
+    - mainwindow.h
+
+        mainwindow.cpp
+
+    - highlighter.h
+
+        highlighter.cpp 代码高亮类
+        
+    - main.h （作为程序入口文件）
+
