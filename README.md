@@ -8,7 +8,7 @@ MIPS-sc 为 MIPS simulator&compiler 的简称，是一个基于Qt实现的带图
 
 右侧为寄存器、syscall输入输出窗口，可通过按钮查看相应寄存器与内存的值、修改PC值、对应内存单元值；
 
-<img src="document/sim-eg.png"/>
+![image](https://github.com/yunwei37/MIPS-sc/blob/master/document/sim-eg.png)
 
 - 文件菜单：
 
@@ -18,13 +18,13 @@ MIPS-sc 为 MIPS simulator&compiler 的简称，是一个基于Qt实现的带图
 
 支持  .bin 文件反汇编为 .asm 文件，支持导入加载 .bin 文件并执行：
 
-<img src="document/memu-file.png"  width="200px"  />
+![image](https://github.com/yunwei37/MIPS-sc/blob/master/document/memu-file.png)
 
 - 编辑器/编译界面
 
 上方为代码编辑器，下方为编译输出结果，对相应错误有错误详细信息以及行号提示
 
-<img src="document/com-eg.png"/>
+![image](https://github.com/yunwei37/MIPS-sc/blob/master/document/com-eg.png)
 
 ## 特性
 - 支持语法高亮；
